@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.social-image {
+  width: 20px;
+  height: auto;
+}
+
+.topbar {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.topbar nav {
+  float: left;
+}
+
+.topbar nav a {
+  color: #9f9f9f;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 53px;
+  transition: color 0.2s;
+}
+
+.topbar nav a:hover {
+  color: #000;
+}
+
+.social {
+  float: right;
+  margin-right: 10px;
+}
+
+.social a {
+  padding: 0 12px;
+  opacity: 0.6;
+  background: #fff;
+  transition: opacity 0.3s;
+}
+
+.social a:hover {
+  opacity: 1;
+}
+
+.banniere {
+  height: 430px;
+  background: center right/ cover url("../images/course.jpg");
+}
+
+.main {
+  float: left;
+  background: #fff;
+  width: calc(100% - 375px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+  position: relative;
+  z-index: 2;
+}
+
+.sidebar {
+  position: relative;
+  float: right;
+  background: #fbfbfbb9;
+  opacity: 1;
+  width: 375px;
+  padding: 40px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.sidebar-title {
+  font-size: 30px;
+  color: #000;
+  margin: 15px 0;
+}
+
+.sidebar-title:first-child {
+  margin-top: 0;
+}
+
+.sidebar a {
+  color: #9f9f9f;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 17px;
+  line-height: 2.3;
+}
+
+.sidebar li {
+  padding: 6px 0;
+}
+
+.sidebar li:first-child {
+  padding-top: 0;
+}
+
+.sidebar li:last-child {
+  padding-bottom: 0;
+}
+
+.sidebar hr {
+  border: 1px solid #c4c4c4;
+  margin: 50px 0;
+}
+
+.article {
+  position: relative;
+  margin: 50px 0;
+  padding-left: 373px;
+  min-height: 203px;
+}
+
+.article a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.article a:hover {
+  text-decoration: underline;
+}
+.article-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 308px;
+  height: auto;
+  margin-right: 25px;
+}
+
+.article-img img {
+  width: 100%;
+  height: auto;
+}
+
+.article-date {
+  font-size: 17px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 5px;
+}
+
+.article-title {
+  font-size: 2.25rem;
+  line-height: 1.1;
+  font-family: "Cardo", serif;
+  margin: 0 0 15px 0;
+}
+
+.footer {
+  clear: both;
+  position: relative;
+  background: green;
+}
+
+.copyright {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+}
+
+p::first-letter {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.sidebar li::before {
+  content: "-";
+}
+
+.sidebar li::after {
+  content: ".";
+}
+
+.article-img {
+  transition: transform 0.5s ease-in-out;
+  /*animation: slideDown 10s;*/
+}
+
+/*.article-img:hover {
+  transform: scale(1.1);
+}*/
+
+/*@keyframes slideDown {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}*/
+
+@media screen and (max-width: 1100px) {
+  .main {
+    width: 100%;
+  }
+
+  .main .container {
+    overflow: hidden;
+  }
+
+  .sidebar {
+    float: left;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .article {
+    padding: 0;
+  }
+
+  .article-img {
+    position: static;
+    margin-bottom: 1rem;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 854px) {
+  .topbar {
+    position: absolute;
+  }
+
+  .topbar nav,
+  .social {
+    float: none;
+    text-align: center;
+  }
+
+  .topbar nav {
+    margin-bottom: 10px;
+  }
+  .topbar nav a {
+    display: inline-block;
+    margin: 0 20px 5px 20px;
+    white-space: nowrap;
+  }
+}
